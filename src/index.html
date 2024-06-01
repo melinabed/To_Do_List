@@ -5,5 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>my to-do-list</h1>
+      </div>
+      <div class="main">
+        <div class="sidebar">
+          <div class="dates">
+            <nav><button id="today">Today</button></nav>
+            <nav><button id="week">This Week</button></nav>
+            <nav><button id="all">All</button></nav>
+          </div>
+          <div class="lists">
+            <div id="list-title">My Lists</div>
+            <nav><button class="list-items">Reminders</button></nav>
+            <nav><button class="list-items">Grocery List</button></nav>
+            <nav><button class="list-items">Work</button></nav>
+          </div>
+        </div>
+        <div class="content">
+          <button id="add-new-task">Add New Task</button>
+          <dialog>
+            <form id="myForm">
+              <input type="text" id="title" name="title" placeholder="Title" />
+              <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Description"
+              />
+              <input type="date" id="dueDate" name="dueDate" />
+              <select name="priority" id="priority">
+                <option>--Priority--</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              <button id="submit-task">Submit</button>
+            </form>
+          </dialog>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

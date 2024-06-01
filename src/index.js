@@ -1,1 +1,2 @@
-console.log("start your project!");
+import "./style.css";
+import Dom from "./modules/dom";
