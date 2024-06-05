@@ -58,7 +58,11 @@ nav > button {
 /*Main Content*/
 
 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 20px;
+  width: 100%;
 }
 
 dialog[open] {
@@ -78,4 +82,53 @@ form > input,
 form > select,
 form > button {
   padding: 5px 10px;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/**/
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+}
+
+.task {
+  display: flex;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"] {
+  height: 100%;
+  width: 25px;
+}
+
+.task-info-container {
+  flex: 1;
+  font-size: 2rem;
+}
+
+#descrip-div {
+  font-size: 1rem;
+  color: gray;
+}
+
+#due-date-div {
+  font-size: 1.5rem;
+  color: gray;
 }

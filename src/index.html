@@ -25,7 +25,9 @@
           </div>
         </div>
         <div class="content">
-          <button id="add-new-task">Add New Task</button>
+          <div class="add-button-container">
+            <button id="add-new-task">Add New Task</button>
+          </div>
           <dialog>
             <form id="myForm">
               <input type="text" id="title" name="title" placeholder="Title" />
@@ -42,9 +44,13 @@
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
               </select>
-              <button id="submit-task">Submit</button>
+              <div class="dialog-buttons">
+                <button id="cancel-task">Cancel</button>
+                <button id="submit-task">Submit</button>
+              </div>
             </form>
           </dialog>
+          <div class="task-container"></div>
         </div>
       </div>
     </div>
