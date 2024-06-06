@@ -16,8 +16,9 @@
   justify-content: center;
   align-items: center;
   padding: 16px;
-  background-color: #0a0a0a;
+  background-color: #404040;
   color: #fafafa;
+  height: 100px;
 }
 
 h1 {
@@ -30,15 +31,26 @@ h1 {
   height: 100%;
 }
 
+/*Sidebar Styles*/
+
 .sidebar {
   display: grid;
   padding: 16px;
-  background-color: #e5e5e5;
+  background-color: #fafafa;
+  min-width: 225px;
 }
 
 .dates,
 .lists {
   display: grid;
+  justify-items: start;
+}
+
+.dates > nav > button {
+  font-weight: bold;
+  border: none;
+  color: #f59e0b;
+  background-color: transparent;
 }
 
 .lists > div {
@@ -46,6 +58,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   text-decoration: underline gray;
+  margin-left: 10px;
 }
 
 nav > button {
@@ -55,7 +68,14 @@ nav > button {
   cursor: pointer;
 }
 
-/*Main Content*/
+.list-buttons {
+  font-weight: bold;
+  border: none;
+  color: #2563eb;
+  background-color: transparent;
+}
+
+/*Main Content Styles*/
 
 .content {
   display: flex;
@@ -67,29 +87,100 @@ nav > button {
 
 dialog[open] {
   position: relative;
-  top: 40%;
+  top: 30%;
   left: 40%;
-  padding: 20px 40px;
+  padding: 40px;
+  border: none;
+  border-radius: 8px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 form > input,
 form > select,
 form > button {
   padding: 5px 10px;
+  font-size: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+#form-title {
+  font-weight: bold;
+  color: #a3a3a3;
+}
+
+form > label {
+  font-size: 1.5rem;
+  padding-left: 10px;
+  color: #a3a3a3;
+}
+
+select {
+  background-color: white;
+}
+
+select option {
+  background-color: white;
 }
 
 .dialog-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5rem;
 }
 
-/**/
+#cancel-task,
+#submit-task {
+  font-size: 1.25rem;
+  padding: 5px 10px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+#cancel-task {
+  color: #2563eb;
+}
+
+#submit-task {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/*List Name and Add New Button Styles*/
+
+#list-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 16px;
+  color: #d4d4d4;
+}
+
+#add-new-task {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  gap: 5px;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  color: #2563eb;
+  background-color: white;
+  cursor: pointer;
+}
+
+#add-icon {
+  content: url(icons/add-icon.svg);
+}
+
+/*Task Container Styles*/
 
 .task-container {
   display: flex;
@@ -102,8 +193,8 @@ form > button {
 .task {
   display: flex;
   gap: 10px;
-  border: 1px solid black;
-  border-radius: 8px;
+  border-bottom: 2px solid #d4d4d4;
+
   padding: 16px;
 }
 
@@ -123,6 +214,10 @@ input[type="radio"] {
   font-size: 2rem;
 }
 
+#priority-div {
+  color: #f59e0b;
+}
+
 #descrip-div {
   font-size: 1rem;
   color: gray;
@@ -132,6 +227,8 @@ input[type="radio"] {
   font-size: 1.5rem;
   color: gray;
 }
+
+/*Task Button Styles*/
 
 .task-buttons {
   display: flex;
@@ -145,14 +242,21 @@ input[type="radio"] {
   padding: 5px 10px;
   border: none;
   border-radius: 8px;
+  height: 30px;
+  width: 30px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+
+  cursor: pointer;
 }
 
 #edit-button {
-  background-color: #0ea5e9;
-  color: white;
+  background-image: url(icons/edit-icon.svg);
 }
 
 #delete-button {
-  background-color: #dc2626;
-  color: white;
+  background-image: url(icons/trash-icon.svg);
 }

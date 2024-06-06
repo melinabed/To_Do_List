@@ -79,16 +79,18 @@ const Dom = (() => {
       priorityDiv.classList.add("item-checked");
       titleDiv.prepend(priorityDiv);
 
+      //Dom Manip For the task buttons
+
       const taskButtons = document.createElement("div");
       taskButtons.classList.add("task-buttons");
 
       const editButton = document.createElement("button");
-      editButton.textContent = "Edit";
+      //editButton.textContent = "Edit";
       editButton.setAttribute("id", "edit-button");
       taskButtons.appendChild(editButton);
 
       const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Delete";
+      //deleteButton.textContent = "Delete";
       deleteButton.setAttribute("id", "delete-button");
       taskButtons.appendChild(deleteButton);
 
@@ -148,18 +150,7 @@ const Dom = (() => {
 
    */
 
-  return {
-    content,
-    addNewTaskButton,
-    dialog,
-    form,
-    cancelTaskButton,
-    title,
-    description,
-    dueDate,
-    priority,
-    getFromLocalStorage,
-  };
+  return { getFromLocalStorage };
 })();
 
 export default Dom;
