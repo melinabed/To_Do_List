@@ -1,3 +1,4 @@
+import { ja } from "date-fns/locale";
 import Task from "./task";
 
 const Dom = (() => {
@@ -29,6 +30,8 @@ const Dom = (() => {
     task.formatDate();
 
     addToLocalStorage(reminders);
+
+    console.log(reminders);
   };
 
   const renderTasks = (reminders) => {
@@ -88,6 +91,14 @@ const Dom = (() => {
       deleteButton.textContent = "Delete";
       deleteButton.setAttribute("id", "delete-button");
       taskButtons.appendChild(deleteButton);
+
+      //Delete Button Click Listener
+      //Bug Needs to Fixed (local storage is deleting wrong item)
+      deleteButton.addEventListener("click", (index) => {
+        reminders.splice(index, 1);
+        localStorage.setItem("todos", JSON.stringify(reminders));
+        taskItemsContainer.removeChild(task);
+      });
 
       task.appendChild(checkContainer);
       task.appendChild(taskInfo);

@@ -132,3 +132,27 @@ input[type="radio"] {
   font-size: 1.5rem;
   color: gray;
 }
+
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#edit-button,
+#delete-button {
+  font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+#edit-button {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+#delete-button {
+  background-color: #dc2626;
+  color: white;
+}
